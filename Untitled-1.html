@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+    <style>
+        button,#quote{
+            margin:20px 250px;
+        }
+    </style>
+    <body>
+        <button id="generate">Generate a quote</button>
+        <div id="quote">
+            <h1>"</h1>
+            <div id="quote1"></div>
+            
+        </div>
+    </body>
+    <script>
+        const list1=["The journey of a thousand miles begins with one step.","That which does not kill us makes us stronger."];
+        const button=document.getElementById('generate');
+        const divquote=document.getElementById("quote1");
+        button.addEventListener('click',getquote)
+        function getquote(){
+            divquote.innerHTML=list1[parseInt(Math.random()*list1.length)];
+        }
+    </script>
+</html>

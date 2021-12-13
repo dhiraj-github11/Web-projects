@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <title>
+
+    </title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        #btn{
+            width:100px;
+            margin:20px 250px;
+            border:solid 2px black;
+            background-color:aquamarine;
+            border-radius: 50px;
+        }
+        #btn:hover{
+            background-color:rgb(91, 245, 194)
+        }
+        
+    </style>
+    
+    <body>
+        <h1 id="change">Change color</h1>
+        <button id="btn">color change</button>
+    </body>
+    <script type="text/javascript">
+        const body=document.querySelector('body');
+        const button=document.querySelector("#btn");
+        const listclr=["red","green","blue","orange"];
+        body.style.backgroundColor="yellow";
+        button.addEventListener('click',changebackground)
+        function changebackground(){
+            const colorIndex=parseInt(Math.random()*listclr.length+1)
+            body.style.backgroundColor=listclr[colorIndex]
+        }
+
+    </script>
+</html>
